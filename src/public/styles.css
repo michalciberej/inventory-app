@@ -48,3 +48,61 @@ a:focus {
   text-decoration: underline;
   outline: none;
 }
+
+h1 {
+  text-align: center;
+}
+
+.formContainer {
+  max-width: 358px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+form input,
+form select {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 5px 3px;
+  color: white;
+  border-radius: 5px;
+}
+
+option {
+  background-color: black;
+  color: white;
+}
+
+button[type='submit'] {
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  margin-top: 1rem;
+}
+
+button[type='submit']:hover,
+button[type='submit']:focus {
+  background-color: white;
+  color: black;
+}
+
+.errorContainer {
+  margin-top: 2rem;
+  text-align: center;
+  color: lightcoral;
+  line-height: 1.5;
+}

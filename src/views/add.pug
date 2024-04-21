@@ -3,3 +3,24 @@ extends layout
 block main 
   main
     h1 Add page
+    div.formContainer
+      form(action="/add", method="POST")
+        div
+          label(for="title") Title*
+          input#title(type="text", name="title" minlength="1")
+        div
+          label(for="price") Price*
+          input#number(type="number", name="price", min="1")
+        div
+          label(for="description") Description* 
+          input#description(type="text", name="description" minlength="1")
+        div 
+          label(for="category") Category*
+          select#category(name="category") 
+            each category in categories
+              option(value=category._id) #{category.title} 
+        button(type="submit") Add Item
+      if err
+        div.errorContainer
+          each e in err 
+            p #{e.msg}
