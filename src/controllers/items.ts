@@ -8,7 +8,6 @@ router.get(
   '/',
   asyncHandler(async (req, res) => {
     const items = await Item.find({});
-    console.log(items);
     res.render('items', { items });
   })
 );
