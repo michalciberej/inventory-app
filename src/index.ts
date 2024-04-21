@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import mongoose from 'mongoose';
 
 import indexController from './controllers/home';
 import itemsController from './controllers/items';
@@ -10,6 +11,17 @@ import addController from './controllers/add';
 
 dotenv.config();
 const app = express();
+
+const connectToDB = async () => {
+  try {
+    await mongoose.connect(process.env.DATABASE_URL!);
+    console.log('Successfully connected to database!');
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+connectToDB();
 
 app.use(cors());
 app.use(bodyParser.json());
