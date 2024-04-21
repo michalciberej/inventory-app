@@ -44,7 +44,6 @@ router.post(
 
     if (!err.isEmpty()) {
       const categories = await Category.find({});
-      console.log(err.array());
       res.render('add', {
         categories,
         err: err.array({ onlyFirstError: true }),
