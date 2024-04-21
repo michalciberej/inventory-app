@@ -3,3 +3,7 @@ extends layout
 block main 
   main 
     h1 Categories page
+    ul 
+      each category in categories 
+        li 
+          a(href="/categories/" + category._id) #{category.title}

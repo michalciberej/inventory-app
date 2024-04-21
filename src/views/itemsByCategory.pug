@@ -1,0 +1,13 @@
+extends layout 
+
+block main 
+  main 
+    h1 Items by Category Page 
+    .itemsContainer
+      each item in items 
+        .item 
+          .itemHeading 
+            h2 #{item.title}
+            p.price $#{item.price}
+          p #{item.description}
+          a(href="/items/" + item._id) See the item
