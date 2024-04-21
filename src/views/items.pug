@@ -3,3 +3,11 @@ extends layout
 block main 
   main 
     h1 Items page
+    .itemsContainer 
+      each item in items
+        div.item
+          div.itemHeading
+            h2 #{item.title}
+            p.price $#{item.price}
+          p #{item.description}
+          a(href="/items/" + item._id) See the item

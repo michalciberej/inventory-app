@@ -1,0 +1,12 @@
+extends layout
+
+block main 
+  main
+    h1 Item by id page 
+    .item
+      .itemHeading
+        h2 #{item.title}
+        p.price $#{item.price}
+      p #{item.description}
+      form(method="POST", action="/items/" + item._id)
+        button(type="submit") Delete Item

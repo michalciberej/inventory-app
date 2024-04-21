@@ -106,3 +106,35 @@ button[type='submit']:focus {
   color: lightcoral;
   line-height: 1.5;
 }
+
+.itemsContainer {
+  margin: 2rem 0;
+  display: grid;
+  align-content: center;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
+  background-color: darkslategray;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.itemHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item a {
+  align-self: flex-end;
+}
+
+.price {
+  font-weight: 900;
+}
