@@ -7,6 +7,8 @@ Small application to test how things work without meta frameworks, where majorit
 - TypeScript
 - Express
 - Pug
+- MongoDB
+- Mongoose
 
 ## Start localy
 
